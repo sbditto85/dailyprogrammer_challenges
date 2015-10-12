@@ -1,0 +1,8 @@
+[package]
+name = "236-random-bag-system"
+version = "0.1.0"
+authors = ["Casey Allred <casey.allred@fanzz.com>"]
+
+
+[dependencies]
+rand = "0.3"
