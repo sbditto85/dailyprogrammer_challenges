@@ -1,0 +1,4 @@
+[package]
+name = "236-fibonacci-ish-sequence"
+version = "0.1.0"
+authors = ["Casey Allred <sbditto@gmail.com>"]
