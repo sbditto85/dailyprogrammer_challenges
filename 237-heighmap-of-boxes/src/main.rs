@@ -59,9 +59,13 @@ fn fill_box(boxes: &mut Vec<Vec<char>>, startx: usize, starty: usize, c: char) {
         'inner: for curx in {x..boxes[y].len()} {
             println!("{} {} -> {}", curx, cury, boxes[cury][curx]);
             match boxes[cury][curx] {
-                '+' => if curx != startx && curx + 1 < boxes[y].len() && boxes[y][curx+1] == '-' { fill_box(boxes, curx, cury, get_next_lvl_char(c)) },
+                '+' => if curx != startx && curx + 1 < boxes[y].len() && boxes[y][curx+1] == '-' { 
+                    fill_box(boxes, curx, cury, get_next_lvl_char(c)) 
+                },
                 ' ' => boxes[cury][curx] = c,
-                '|' => if curx != startx { break 'inner },
+                '|' => if curx != startx { 
+                    break 'inner 
+                },
                 // '|' => break 'inner,
                 _ => ()
             }
